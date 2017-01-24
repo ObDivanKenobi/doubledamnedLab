@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F1FA03591E37D5CA001F04AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA03581E37D5CA001F04AE /* AppDelegate.swift */; };
-		F1FA035B1E37D5CA001F04AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA035A1E37D5CA001F04AE /* ViewController.swift */; };
-		F1FA035E1E37D5CA001F04AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FA035C1E37D5CA001F04AE /* Main.storyboard */; };
 		F1FA03601E37D5CA001F04AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FA035F1E37D5CA001F04AE /* Assets.xcassets */; };
 		F1FA03631E37D5CA001F04AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FA03611E37D5CA001F04AE /* LaunchScreen.storyboard */; };
+		F1FA036B1E37D6B3001F04AE /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA036A1E37D6B3001F04AE /* ItemViewController.swift */; };
+		F1FA036D1E37D6D4001F04AE /* FullCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA036C1E37D6D4001F04AE /* FullCollectionViewController.swift */; };
+		F1FA03731E37D709001F04AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FA03721E37D709001F04AE /* Main.storyboard */; };
+		F1FA037A1E37DB27001F04AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA03791E37DB27001F04AE /* UIKit.framework */; };
+		F1FA03801E37E389001F04AE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA037F1E37E389001F04AE /* Image.swift */; };
+		F1FDD7BB1E380A5100AF487D /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDD7BA1E380A5100AF487D /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F1FA03551E37D5CA001F04AE /* doubledamnedLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doubledamnedLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FA03581E37D5CA001F04AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1FA035A1E37D5CA001F04AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F1FA035D1E37D5CA001F04AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1FA035F1E37D5CA001F04AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1FA03621E37D5CA001F04AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1FA03641E37D5CA001F04AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1FA036A1E37D6B3001F04AE /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		F1FA036C1E37D6D4001F04AE /* FullCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullCollectionViewController.swift; sourceTree = "<group>"; };
+		F1FA03721E37D709001F04AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F1FA03791E37DB27001F04AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F1FA037F1E37E389001F04AE /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F1FDD7BA1E380A5100AF487D /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FA037A1E37DB27001F04AE /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				F1FA03571E37D5CA001F04AE /* doubledamnedLab */,
 				F1FA03561E37D5CA001F04AE /* Products */,
+				F1FA03781E37DB27001F04AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +64,25 @@
 		F1FA03571E37D5CA001F04AE /* doubledamnedLab */ = {
 			isa = PBXGroup;
 			children = (
+				F1FA036C1E37D6D4001F04AE /* FullCollectionViewController.swift */,
 				F1FA03581E37D5CA001F04AE /* AppDelegate.swift */,
-				F1FA035A1E37D5CA001F04AE /* ViewController.swift */,
-				F1FA035C1E37D5CA001F04AE /* Main.storyboard */,
+				F1FA036A1E37D6B3001F04AE /* ItemViewController.swift */,
+				F1FA03721E37D709001F04AE /* Main.storyboard */,
 				F1FA035F1E37D5CA001F04AE /* Assets.xcassets */,
 				F1FA03611E37D5CA001F04AE /* LaunchScreen.storyboard */,
 				F1FA03641E37D5CA001F04AE /* Info.plist */,
+				F1FA037F1E37E389001F04AE /* Image.swift */,
+				F1FDD7BA1E380A5100AF487D /* CustomCollectionViewCell.swift */,
 			);
 			path = doubledamnedLab;
+			sourceTree = "<group>";
+		};
+		F1FA03781E37DB27001F04AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1FA03791E37DB27001F04AE /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +144,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FA03731E37D709001F04AE /* Main.storyboard in Resources */,
 				F1FA03631E37D5CA001F04AE /* LaunchScreen.storyboard in Resources */,
 				F1FA03601E37D5CA001F04AE /* Assets.xcassets in Resources */,
-				F1FA035E1E37D5CA001F04AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +157,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1FA035B1E37D5CA001F04AE /* ViewController.swift in Sources */,
+				F1FA036D1E37D6D4001F04AE /* FullCollectionViewController.swift in Sources */,
+				F1FDD7BB1E380A5100AF487D /* CustomCollectionViewCell.swift in Sources */,
+				F1FA03801E37E389001F04AE /* Image.swift in Sources */,
 				F1FA03591E37D5CA001F04AE /* AppDelegate.swift in Sources */,
+				F1FA036B1E37D6B3001F04AE /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F1FA035C1E37D5CA001F04AE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1FA035D1E37D5CA001F04AE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F1FA03611E37D5CA001F04AE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -260,6 +276,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = doubledamnedLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiftlab.doubledamnedLab;
@@ -272,6 +292,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = doubledamnedLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiftlab.doubledamnedLab;
@@ -299,6 +323,7 @@
 				F1FA03691E37D5CA001F04AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
