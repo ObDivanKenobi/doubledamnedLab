@@ -70,9 +70,6 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
             }
         }
     }
-    //unwind
-    @IBAction func prepareToUnwind(_: UIStoryboardSegue){}
-    
     
     
     //изображаем работу с нормальной БД

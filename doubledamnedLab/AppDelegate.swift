@@ -7,18 +7,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    //onboarding = false
-    func isFirstTime() -> Bool {
+    func hasBeenSeen() -> Bool {
         return UserDefaults.standard.bool(forKey: "onboarding")
     }
     
     func saveOnboardingFinished() {
-        UserDefaults.standard.set(false, forKey: "onboarding")
+        UserDefaults.standard.set(true, forKey: "onboarding")
         UserDefaults.standard.synchronize()
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        if !isFirstTime(){
+        if hasBeenSeen(){
             window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC") as! FullCollectionViewController
         }
         else {
