@@ -58,7 +58,7 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
     }
     
     //SEGUES
-    
+    //usual
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowImage" {
             if let vc = segue.destination as? ItemViewController{
@@ -70,11 +70,10 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
             }
         }
     }
+    //unwind
+    @IBAction func prepareToUnwind(_: UIStoryboardSegue){}
     
-    //prororype matches func of UI...DataSource, I've used private to avoid it
-    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ShowImage", sender: self)
-    }
+    
     
     //изображаем работу с нормальной БД
     
