@@ -7,21 +7,21 @@
 //
 
 import UIKit
-//import RealmSwift
+import RealmSwift
 
 class FullCollectionViewController: UIViewController, UICollectionViewDataSource {
 
-    //var data_source = try! Realm()
-    //var images : [Item] = []
+    var data_source = try! Realm()
+    var images : [Item] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var close: UIButton!
+    @IBOutlet weak var quit: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        //prepareData()
-        //images = getData()
+        prepareData()
+        images = getData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //so far we have just one section
-        let count = 30 //images.count
+        let count = images.count
         guard count == 0 else {
             return count
         }
@@ -50,14 +50,33 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let tmp = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath as IndexPath)
         let cell = tmp as! CustomCollectionViewCell
-        //let info = images[indexPath.row]
-        cell.imageView.image = #imageLiteral(resourceName: "Le deBug")
-        cell.title.text = "Image\(indexPath.row)" //info.title
+        let info = images[indexPath.row]
+        cell.imageView.image = info.image//#imageLiteral(resourceName: "Le deBug")
+        cell.title.text = info.title
         
         return cell
     }
     
-    /*
+    //SEGUES
+    //usual
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowImage" {
+            if let vc = segue.destination as? ItemViewController{
+                let indexPaths = collectionView!.indexPathsForSelectedItems!
+                let indexPath = indexPaths[0]
+                
+                vc.imageTitle = images[indexPath.row].title
+                vc.image = images[indexPath.row].image
+            }
+        }
+    }
+    //unwind
+    @IBAction func prepareToUnwind(_: UIStoryboardSegue){}
+    
+    
+    
+    //изображаем работу с нормальной БД
+    
     func prepareData() {
         try! data_source.write {
             data_source.deleteAll()
@@ -86,10 +105,11 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         }
         
         return items
-    }*/
+    }
     
-    @IBAction func closeApp() {
+    @IBAction func quit(_ sender: Any) {
         exit(0)
     }
+
 }
 
