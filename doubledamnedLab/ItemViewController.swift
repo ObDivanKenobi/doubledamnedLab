@@ -11,11 +11,17 @@ import UIKit
 
 class ItemViewController: UIViewController{
     
-    @IBOutlet weak var navbar: UINavigationItem!
     @IBOutlet weak var back: UIBarButtonItem!
+    @IBOutlet weak var caption: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var imageTitle: String!;
+    var image: UIImage!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        caption.text = imageTitle
+        imageView.image = image
     }
     
     override func didReceiveMemoryWarning() {

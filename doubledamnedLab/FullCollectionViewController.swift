@@ -47,8 +47,6 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         return 0
     }
     
-    //SEGUES
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let tmp = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath as IndexPath)
         let cell = tmp as! CustomCollectionViewCell
@@ -59,15 +57,16 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         return cell
     }
     
+    //SEGUES
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowImage" {
             if let vc = segue.destination as? ItemViewController{
                 let indexPaths = collectionView!.indexPathsForSelectedItems!
-                let indexPath = indexPaths[0] as IndexPath
+                let indexPath = indexPaths[0]
                 
-                //let vc = segue.destination as! NewViewController
-                
-                vc.navbar.title = images[indexPath.row % images.count].title
+                vc.imageTitle = images[indexPath.row].title
+                vc.image = images[indexPath.row].image
             }
         }
     }
@@ -76,6 +75,8 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
     private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "ShowImage", sender: self)
     }
+    
+    //изображаем работу с нормальной БД
     
     func prepareData() {
         try! data_source.write {
