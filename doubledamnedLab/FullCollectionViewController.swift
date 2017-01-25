@@ -15,7 +15,7 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
     var images : [Item] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var close: UIButton!
+    @IBOutlet weak var quit: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,8 +88,9 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         return items
     }
     
-    @IBAction func closeApp() {
+    @IBAction func quit(_ sender: Any) {
         exit(0)
     }
+
 }
 
