@@ -7,16 +7,15 @@
 //
 
 import Foundation
-//import RealmSwift
+import RealmSwift
 import UIKit
 
-/*
+
 class RealmItem: Object {
     dynamic var ID : Int = -1
     dynamic var image : NSData! = nil
     dynamic var title : String = "Зачем! Зачем они заставляют нас открывать несуществующие объекты?"
 }
- */
 
 class Item {
     var ID : Int

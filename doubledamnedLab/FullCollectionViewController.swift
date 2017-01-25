@@ -7,12 +7,12 @@
 //
 
 import UIKit
-//import RealmSwift
+import RealmSwift
 
 class FullCollectionViewController: UIViewController, UICollectionViewDataSource {
 
-    //var data_source = try! Realm()
-    //var images : [Item] = []
+    var data_source = try! Realm()
+    var images : [Item] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var close: UIButton!
@@ -20,8 +20,8 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        //prepareData()
-        //images = getData()
+        prepareData()
+        images = getData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //so far we have just one section
-        let count = 30 //images.count
+        let count = images.count
         guard count == 0 else {
             return count
         }
@@ -50,14 +50,14 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let tmp = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath as IndexPath)
         let cell = tmp as! CustomCollectionViewCell
-        //let info = images[indexPath.row]
-        cell.imageView.image = #imageLiteral(resourceName: "Le deBug")
-        cell.title.text = "Image\(indexPath.row)" //info.title
+        let info = images[indexPath.row]
+        cell.imageView.image = info.image//#imageLiteral(resourceName: "Le deBug")
+        cell.title.text = info.title
         
         return cell
     }
     
-    /*
+    
     func prepareData() {
         try! data_source.write {
             data_source.deleteAll()
@@ -86,7 +86,7 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         }
         
         return items
-    }*/
+    }
     
     @IBAction func closeApp() {
         exit(0)
