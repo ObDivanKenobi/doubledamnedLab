@@ -9,7 +9,7 @@
         <!--Onboarding Controller-->
         <scene sceneID="KJQ-gA-Gqo">
             <objects>
-                <viewController id="EpX-SS-hDA" customClass="OnboardingController" customModule="doubledamnedLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="EpX-SS-hDA" customClass="OnboardingController" customModule="doubledamnedLab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8xw-hn-0Rl"/>
                         <viewControllerLayoutGuide type="bottom" id="fpT-Gn-28q"/>

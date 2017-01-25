@@ -18,8 +18,10 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
     let screen: CGRect = UIScreen.main.bounds
     var scroll: UIScrollView?
     var dots: UIPageControl?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = backgroundColor
         scroll = UIScrollView(frame: CGRect(x: 0.0, y: 0.0, width: screen.width, height: screen.height * 0.9))
         scroll?.showsHorizontalScrollIndicator = false
@@ -92,6 +94,7 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
             height: h
         )
     }
+    
     func swipe(sender: AnyObject) -> () {
         if let scrollView = scroll {
             let x = CGFloat(dots!.currentPage) * scrollView.frame.size.width

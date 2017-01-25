@@ -37,10 +37,10 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         }
         
         let messageEmpty : UILabel = UILabel(frame: collectionView.bounds)
-        messageEmpty.text = "Писос."
+        messageEmpty.text = "Nothing to show."
         messageEmpty.textAlignment = NSTextAlignment.center
         messageEmpty.backgroundColor = collectionView.backgroundColor
-        messageEmpty.textColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        messageEmpty.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         messageEmpty.sizeToFit()
         
         collectionView.backgroundView = messageEmpty

@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  doubledamnedLab
-//
-//  Created by Надежда on 24.01.17.
-//  Copyright © 2017 swiftlab. All rights reserved.
-//
+
 
 import UIKit
 
@@ -12,10 +6,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    //onboarding = false
+    func isFirstTime() -> Bool {
+        return UserDefaults.standard.bool(forKey: "onboarding")
+    }
+    
+    func saveOnboardingFinished() {
+        UserDefaults.standard.set(false, forKey: "onboarding")
+        UserDefaults.standard.synchronize()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if !isFirstTime(){
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC") as! FullCollectionViewController
+        }
+        else {
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Onboarding") as! OnboardingController
+        }
+                
         return true
     }
 
