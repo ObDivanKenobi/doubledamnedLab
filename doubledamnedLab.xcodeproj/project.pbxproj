@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20ACF85B8DB2EDCBDE4C0A9 /* Pods_doubledamnedLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C910AB542745ABAF16FD1E1 /* Pods_doubledamnedLab.framework */; };
+		EAAB35E01E39023F002C2DD3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB35DF1E39023F002C2DD3 /* OnboardingViewController.swift */; };
 		F107BC9D1E3866370043F310 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107BC9C1E3866370043F310 /* ItemViewController.swift */; };
 		F1FA03591E37D5CA001F04AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA03581E37D5CA001F04AE /* AppDelegate.swift */; };
 		F1FA03601E37D5CA001F04AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FA035F1E37D5CA001F04AE /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		0711814800B0A64F7770DF5C /* Pods-doubledamnedLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doubledamnedLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-doubledamnedLab/Pods-doubledamnedLab.release.xcconfig"; sourceTree = "<group>"; };
 		9C910AB542745ABAF16FD1E1 /* Pods_doubledamnedLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doubledamnedLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF186B193E4CC6543F32262E /* Pods-doubledamnedLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doubledamnedLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doubledamnedLab/Pods-doubledamnedLab.debug.xcconfig"; sourceTree = "<group>"; };
+		EAAB35DF1E39023F002C2DD3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F107BC9C1E3866370043F310 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		F1FA03551E37D5CA001F04AE /* doubledamnedLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doubledamnedLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FA03581E37D5CA001F04AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				F1FA037F1E37E389001F04AE /* Image.swift */,
 				F1FDD7BA1E380A5100AF487D /* CustomCollectionViewCell.swift */,
 				F107BC9C1E3866370043F310 /* ItemViewController.swift */,
+				EAAB35DF1E39023F002C2DD3 /* OnboardingViewController.swift */,
 			);
 			path = doubledamnedLab;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FA036D1E37D6D4001F04AE /* FullCollectionViewController.swift in Sources */,
+				EAAB35E01E39023F002C2DD3 /* OnboardingViewController.swift in Sources */,
 				F1FDD7BB1E380A5100AF487D /* CustomCollectionViewCell.swift in Sources */,
 				F107BC9D1E3866370043F310 /* ItemViewController.swift in Sources */,
 				F1FA03801E37E389001F04AE /* Image.swift in Sources */,
@@ -349,6 +353,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = doubledamnedLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiftlab.doubledamnedLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +371,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = doubledamnedLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiftlab.doubledamnedLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";

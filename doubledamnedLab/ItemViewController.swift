@@ -11,7 +11,6 @@ import UIKit
 
 class ItemViewController: UIViewController{
     
-    @IBOutlet weak var back: UIBarButtonItem!
     @IBOutlet weak var caption: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -27,5 +26,9 @@ class ItemViewController: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func back(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 }
