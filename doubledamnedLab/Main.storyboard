@@ -9,7 +9,7 @@
         <!--Onboarding Controller-->
         <scene sceneID="KJQ-gA-Gqo">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="EpX-SS-hDA" customClass="OnboardingController" customModule="doubledamnedLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EpX-SS-hDA" customClass="OnboardingController" customModule="doubledamnedLab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8xw-hn-0Rl"/>
                         <viewControllerLayoutGuide type="bottom" id="fpT-Gn-28q"/>
@@ -27,7 +27,7 @@
         <!--Full Collection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="FullCollectionViewController" customModule="doubledamnedLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FullCollectionViewController" customModule="doubledamnedLab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -129,7 +129,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nA7-kk-6Bp">
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Назад"/>
                                                 <connections>
                                                     <action selector="back:" destination="Q3p-t1-suf" eventType="touchUpInside" id="ca3-Ue-5rw"/>
                                                 </connections>

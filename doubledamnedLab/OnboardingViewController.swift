@@ -22,6 +22,7 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //установка bgcolor и настройка скроллвью
         view.backgroundColor = backgroundColor
         scroll = UIScrollView(frame: CGRect(x: 0.0, y: 0.0, width: screen.width, height: screen.height * 0.9))
         scroll?.showsHorizontalScrollIndicator = false
@@ -29,11 +30,14 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
         scroll?.isPagingEnabled = true
         view.addSubview(scroll!)
         
+        //настройка "точек"
         if (slides.count > 1) {
             dots = UIPageControl(frame: CGRect(x: 0.0, y: screen.height * 0.875, width: screen.width, height: screen.height * 0.05))
             dots?.numberOfPages = slides.count
             view.addSubview(dots!)
         }
+        
+        //и слайдов
         for i in 0 ..< slides.count {
             if let image = UIImage(named: slides[i]["image"]!) {
                 let imageView: UIImageView = UIImageView(frame: getFrame(iW: image.size.width, iH: image.size.height, slide: i, offset: screen.height * 0.15))
@@ -55,6 +59,8 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
         scroll?.contentSize = CGSize(width: CGFloat(Int(screen.width) *  slides.count), height: screen.height * 0.5)
         scroll?.delegate = self
         dots?.addTarget(self, action: Selector(("swipe:")), for: UIControlEvents.valueChanged)
+        
+        //кнопка "пропустить"
         let closeButton = UIButton()
         closeButton.frame = CGRect(x: screen.width - 70, y: 20, width: 60, height: 60)
         closeButton.setTitle("Skip", for: .normal)

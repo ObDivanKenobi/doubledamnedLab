@@ -10,13 +10,14 @@ import Foundation
 import RealmSwift
 import UIKit
 
-
+//класс, из которого Realm строит БД
 class RealmItem: Object {
     dynamic var ID : Int = -1
     dynamic var image : NSData! = nil
     dynamic var title : String = "Зачем! Зачем они заставляют нас открывать несуществующие объекты?"
 }
 
+//обёртка для реалмовского айтема.
 class Item {
     var ID : Int
     var image : UIImage!
