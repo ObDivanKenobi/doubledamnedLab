@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D20ACF85B8DB2EDCBDE4C0A9 /* Pods_doubledamnedLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C910AB542745ABAF16FD1E1 /* Pods_doubledamnedLab.framework */; };
+		F107BC9D1E3866370043F310 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107BC9C1E3866370043F310 /* ItemViewController.swift */; };
 		F1FA03591E37D5CA001F04AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA03581E37D5CA001F04AE /* AppDelegate.swift */; };
 		F1FA03601E37D5CA001F04AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FA035F1E37D5CA001F04AE /* Assets.xcassets */; };
 		F1FA03631E37D5CA001F04AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FA03611E37D5CA001F04AE /* LaunchScreen.storyboard */; };
-		F1FA036B1E37D6B3001F04AE /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA036A1E37D6B3001F04AE /* ItemViewController.swift */; };
 		F1FA036D1E37D6D4001F04AE /* FullCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA036C1E37D6D4001F04AE /* FullCollectionViewController.swift */; };
 		F1FA03731E37D709001F04AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FA03721E37D709001F04AE /* Main.storyboard */; };
 		F1FA037A1E37DB27001F04AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA03791E37DB27001F04AE /* UIKit.framework */; };
@@ -23,12 +23,12 @@
 		0711814800B0A64F7770DF5C /* Pods-doubledamnedLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doubledamnedLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-doubledamnedLab/Pods-doubledamnedLab.release.xcconfig"; sourceTree = "<group>"; };
 		9C910AB542745ABAF16FD1E1 /* Pods_doubledamnedLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doubledamnedLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF186B193E4CC6543F32262E /* Pods-doubledamnedLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doubledamnedLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doubledamnedLab/Pods-doubledamnedLab.debug.xcconfig"; sourceTree = "<group>"; };
+		F107BC9C1E3866370043F310 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		F1FA03551E37D5CA001F04AE /* doubledamnedLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doubledamnedLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FA03581E37D5CA001F04AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FA035F1E37D5CA001F04AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1FA03621E37D5CA001F04AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1FA03641E37D5CA001F04AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1FA036A1E37D6B3001F04AE /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		F1FA036C1E37D6D4001F04AE /* FullCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullCollectionViewController.swift; sourceTree = "<group>"; };
 		F1FA03721E37D709001F04AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F1FA03791E37DB27001F04AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -81,13 +81,13 @@
 			children = (
 				F1FA036C1E37D6D4001F04AE /* FullCollectionViewController.swift */,
 				F1FA03581E37D5CA001F04AE /* AppDelegate.swift */,
-				F1FA036A1E37D6B3001F04AE /* ItemViewController.swift */,
 				F1FA03721E37D709001F04AE /* Main.storyboard */,
 				F1FA035F1E37D5CA001F04AE /* Assets.xcassets */,
 				F1FA03611E37D5CA001F04AE /* LaunchScreen.storyboard */,
 				F1FA03641E37D5CA001F04AE /* Info.plist */,
 				F1FA037F1E37E389001F04AE /* Image.swift */,
 				F1FDD7BA1E380A5100AF487D /* CustomCollectionViewCell.swift */,
+				F107BC9C1E3866370043F310 /* ItemViewController.swift */,
 			);
 			path = doubledamnedLab;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 			files = (
 				F1FA036D1E37D6D4001F04AE /* FullCollectionViewController.swift in Sources */,
 				F1FDD7BB1E380A5100AF487D /* CustomCollectionViewCell.swift in Sources */,
+				F107BC9D1E3866370043F310 /* ItemViewController.swift in Sources */,
 				F1FA03801E37E389001F04AE /* Image.swift in Sources */,
 				F1FA03591E37D5CA001F04AE /* AppDelegate.swift in Sources */,
-				F1FA036B1E37D6B3001F04AE /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

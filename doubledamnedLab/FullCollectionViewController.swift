@@ -47,6 +47,8 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         return 0
     }
     
+    //SEGUES
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let tmp = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath as IndexPath)
         let cell = tmp as! CustomCollectionViewCell
@@ -57,6 +59,23 @@ class FullCollectionViewController: UIViewController, UICollectionViewDataSource
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowImage" {
+            if let vc = segue.destination as? ItemViewController{
+                let indexPaths = collectionView!.indexPathsForSelectedItems!
+                let indexPath = indexPaths[0] as IndexPath
+                
+                //let vc = segue.destination as! NewViewController
+                
+                vc.navbar.title = images[indexPath.row % images.count].title
+            }
+        }
+    }
+    
+    //prororype matches func of UI...DataSource, I've used private to avoid it
+    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowImage", sender: self)
+    }
     
     func prepareData() {
         try! data_source.write {
